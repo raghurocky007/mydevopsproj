@@ -1,0 +1,36 @@
+{
+  "name": "sduoers_role",
+  "description": "Role to the oracle_sudo_user",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "oracle_sudo_user": {
+      "sudo": {
+        "groups": [
+          "oracleadmin",
+          "oracleuser",
+          "oracledba",
+          "oraclemanager"
+        ],
+        "users": [
+          "ashish",
+          "raghav",
+          "ramesh",
+          "sagar",
+          "nilesh",
+          "Krishna"
+        ],
+        "password": "true"
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[oracle_sudo_user]"
+  ],
+  "env_run_lists": {
+
+  }
+}
